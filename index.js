@@ -6,7 +6,7 @@ var spawn = require('child_process').spawn;
 var H = require('highland')
 
 function callS(f1, f2) {
-  var cmd = spawn('diff', [f1, f2]);
+  var cmd = spawn('hashed-diff', [f1, f2]);
   return H(H(cmd.stdout)
 	.splitBy('\n')
 	.pipe(diff2js()))
@@ -18,7 +18,7 @@ function call(f1, f2, opts) {
     return callS(f1, f2, opts)
 
   var diff = new events.EventEmitter();
-  var command = spawn('diff', [f1, f2]);
+  var command = spawn('hashed-diff', [f1, f2]);
   command.stdout
     .pipe(split())
     .pipe(diff2js())
