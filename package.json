@@ -1,6 +1,6 @@
 {
   "name": "diff-utility",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "description": "Calls diff utility and outputs differences as JS objects",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bertspaan/node-diff-utility"
+    "url": "https://github.com/histograph/node-diff-utility"
   },
   "keywords": [
     "diff"
@@ -16,9 +16,9 @@
   "author": "Bert Spaan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bertspaan/node-diff-utility/issues"
+    "url": "https://github.com/histograph/node-diff-utility/issues"
   },
-  "homepage": "https://github.com/bertspaan/node-diff-utility",
+  "homepage": "https://github.com/histograph/node-diff-utility",
   "dependencies": {
     "highland": "^2.5.1",
     "split2": "^0.2.1",

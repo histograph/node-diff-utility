@@ -12,7 +12,7 @@ tests.forEach(function(test) {
   var failed = false;
 
   tape('Test diffing ' + test.files.join(' & '), function(t) {
-    diff(files[0], files[1])
+    diff('diff', files[0], files[1])
       .on('diff', function(d) {
         diffs.push(d);
       })

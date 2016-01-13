@@ -1,24 +1,21 @@
+var H = require('highland');
 var events = require('events');
 var split = require('split2');
 var diff2js = require('./diff2js');
 var spawn = require('child_process').spawn;
 
-var H = require('highland')
-
-function callS(diffTool,f1, f2) {
-  
-  console.log("performing diff using: " + diffTool);
-
+function callS(diffTool, f1, f2) {
   var cmd = spawn(diffTool, [f1, f2]);
   return H(H(cmd.stdout)
-	.splitBy('\n')
-	.pipe(diff2js()))
+    .splitBy('\n')
+    .pipe(diff2js()));
 }
 
-function call(diffTool,f1, f2, opts) {
+function call(diffTool, f1, f2, opts) {
   // returns a stream when asked to do so
-  if(opts && opts.stream)
-    return callS(diffTool,f1, f2, opts)
+  if (opts && opts.stream) {
+    return callS(diffTool, f1, f2, opts);
+  }
 
   var diff = new events.EventEmitter();
   var command = spawn(diffTool, [f1, f2]);
