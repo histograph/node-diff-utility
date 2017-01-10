@@ -20,14 +20,14 @@
   },
   "homepage": "https://github.com/histograph/node-diff-utility",
   "dependencies": {
-    "highland": "^2.5.1",
-    "split2": "^0.2.1",
-    "through2": "^0.6.3"
+    "highland": "^2.10.1",
+    "split2": "^2.1.1",
+    "through2": "^2.0.3"
   },
   "devDependencies": {
-    "jscs": "^1.10.0",
-    "jshint": "^2.6.0",
-    "tape": "^3.4.0"
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.4",
+    "tape": "^4.6.3"
   },
   "jshintConfig": {
     "node": true,
